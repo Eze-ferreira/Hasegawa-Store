@@ -1,10 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <div className="navbar bg-secondary-content">
       <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-xl">Hasegawa</a>
+        <Link to="/">
+          <div className="btn btn-ghost normal-case text-xl">Hasegawa</div>{" "}
+        </Link>
       </div>
       <div className="flex-none">
         <div className="dropdown dropdown-end">
@@ -32,7 +35,7 @@ const NavBar = () => {
             className="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow"
           >
             <div className="card-body">
-              <span className="font-bold text-lg">8 items</span>
+              <span className="font-bold text-lg">1 items</span>
               <span className="text-info">Subtotal: $$$$</span>
               <div className="card-actions">
                 <button className="btn btn-primary btn-block">Carrito</button>
@@ -51,16 +54,16 @@ const NavBar = () => {
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a className="justify-between">
-                Profile
+              <Link to="/categoria/1">
+                Seinen
                 <span className="badge">New</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a>Ajustes</a>
+              <a>Shonen</a>
             </li>
             <li>
-              <a>Ni nos vimos</a>
+              <a>Deportes</a>
             </li>
           </ul>
         </div>
